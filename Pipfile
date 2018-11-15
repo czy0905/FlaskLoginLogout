@@ -9,6 +9,7 @@ name = "pypi"
 flask = "*"
 flask-wtf = "*"
 flask-sqlalchemy = "*"
+flask-login = "*"
 
 [requires]
 python_version = "3.5"

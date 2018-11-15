@@ -1,12 +1,20 @@
 {% extends "base.html" %}
+
 {% block content %}
-	<h1>登录</h1>
-	<form action="" method="post" novalidate>
+	<h1>用户注册</h1>
+	<form action="" method="post">
 		{{ form.hidden_tag() }}
 		<p>
 			{{ form.username.label }}<br>
 			{{ form.username(size=32) }}<br>
 			{% for error in form.username.errors %}
+				<span style="color:red;">[{{ error }}]</span>
+			{% endfor %}
+		</p>
+		<p>
+			{{ form.email.label }}<br>
+			{{ form.email(size=64) }}<br>
+			{% for error in form.email.error %}
 				<span style="color:red;">[{{ error }}]</span>
 			{% endfor %}
 		</p>
@@ -18,12 +26,12 @@
 			{% endfor %}
 		</p>
 		<p>
-			{{ form.remember_me() }}
-			{{ form.remember_me.label }}
+			{{ form.password2.label }}<br>
+			{{ form.password2(size=32) }}<br>
+			{% for error in form.password2.errors %}
+				<span style="color:red;">[{{ error }}]</span>
+			{% endfor %}
 		</p>
-		<p>
-			{{ form.submit() }}
-		</p>
+		<p>{{ form.submit() }}</p>
 	</form>
-	<p>新用户？<a href="{{ url_for('register') }}">点击注册</a></p>
 {% endblock %}

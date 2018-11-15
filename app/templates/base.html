@@ -4,9 +4,22 @@
 	</head>
 	<body>
 		<div>
-			<a href="{{ url_for('login') }}">登录</a> | <a href="#">注册</a>
+			{% if current_user.is_anonymous %}
+				<a href="{{ url_for('login') }}">登录</a> | <a href="{{ url_for('register') }}">注册</a>
+			{% else %}
+				[{{ current_user.username }}] | <a href="{{ url_for('logout') }}">退出</a>
+			{% endif %}
 		</div>
 		<hr>
+		{% with messages=get_flashed_messages() %}
+			{% if messages %}
+				<ul>
+					{% for message in messages %}
+					<li>{{ message }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
 		{%  block content %}
 		{% endblock %}
 	</body>
