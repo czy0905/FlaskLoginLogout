@@ -8,6 +8,7 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-wtf = "*"
+flask-sqlalchemy = "*"
 
 [requires]
 python_version = "3.5"
