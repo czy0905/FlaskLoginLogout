@@ -1,0 +1,104 @@
+2018-11-16 00:01:21,161 ERROR:Exception on /auth/register [GET][in /home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/ccdocs/myproject/app/auth/routes.py", line 44, in register
+    return render_template('auth/register.html', title='注册', form=form)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/ccdocs/myproject/app/templates/auth/register.html", line 2, in template
+    {% import 'bootstrap/wtf.html as wtf %}
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 298, in parse_import
+    node = nodes.Import(lineno=next(self.stream).lineno)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/lexer.py", line 739, in tokeniter
+    name, filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected char "'" at 36
+2018-11-16 00:11:57,083 INFO:程序启动[in /usr/ccdocs/myproject/app/__init__.py:39]
+2018-11-16 00:12:43,454 ERROR:Exception on /auth/register [GET][in /home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/ccdocs/myproject/app/auth/routes.py", line 44, in register
+    return render_template('auth/register.html', title='注册', form=form)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/ccdocs/myproject/app/templates/auth/register.html", line 2, in template
+    {% import 'bootstrap/wtf.html as wtf %}
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/parser.py", line 298, in parse_import
+    node = nodes.Import(lineno=next(self.stream).lineno)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "/home/chenchen/.local/share/virtualenvs/myproject-f5Hwi5Rz/lib/python3.5/site-packages/jinja2/lexer.py", line 739, in tokeniter
+    name, filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected char "'" at 36
+2018-11-16 09:22:22,239 INFO:程序启动[in /usr/ccdocs/myproject/app/__init__.py:39]

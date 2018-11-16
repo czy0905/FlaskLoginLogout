@@ -1,0 +1,8 @@
+*.py[cod]
+
+__pycache__
+
+app.db
+app.log*
+
+logs
